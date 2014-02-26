@@ -1,0 +1,18 @@
+
+# Mac OS Files
+*.DS_Store
+
+# Eclipse IDE Files
+*.project
+*.buildpath
+*.settings
+
+# Apache Files
+*.htaccess
+
+# Yii directories
+runtime/*
+php/assets/*
+
+# Lauch File
+index.php
