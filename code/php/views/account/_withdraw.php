@@ -91,7 +91,10 @@
                   <tr><td>
                         <br>
                         <button type='submit' id='withraw_form_submit' class='button green margin_left'>Submit Request</button>
-                        <?php echo CHtml::image(Yii::app()->baseUrl.'/images/ajax-loader.gif', '', array('class'=>'invisible','id'=>'wait-icon', 'height'=>'20px')); ?>
+						
+                        <?php echo ProjectImage::image('ajax-loader.gif', '', array('class'=>'invisible','id'=>'wait-icon', 'height'=>'20px')); ?>
+						
+						
                   </td></tr>                   
             </table>
       </div>                 

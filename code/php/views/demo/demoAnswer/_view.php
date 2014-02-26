@@ -30,15 +30,10 @@
             <?php } ?>            
       </div>
            
-      
-      
       <div class='answer_center'>
             <?php 
             if($this->getAwardFromAppUser($data->answer_id)) {
-                  echo CHtml::image(Yii::app()->baseUrl.'/images/award.png','',array(
-                              'class'=>'float-right', 
-                              'title'=>'You made your award to this answer'
-                        ));
+				echo ProjectImage::image('award.png',array('class'=>'float-right', 'title'=>'You made your award to this answer'));
             }
             ?>            
             

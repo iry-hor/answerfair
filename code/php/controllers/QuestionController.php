@@ -12,7 +12,7 @@ class QuestionController extends Controller
 			'accessControl -create', // perform access control for CRUD operations
 			'postOnly + delete', // we only allow deletion via POST request
 		);
-    	}
+    }
       
 	public function accessRules()
 	{
@@ -72,20 +72,18 @@ class QuestionController extends Controller
                   }                                   
             } 
 
-		$this->render('view',array(
-			'model'=>$this->loadModel($id),
-			'answerDataProvider'=>$answerDataProvider,
-			'access'=>$access,
-			'awards'=>$awards,
-			'userAnswer'=>$userAnswer,
-			
+			$this->render('view',array(
+				'model'=>$this->loadModel($id),
+				'answerDataProvider'=>$answerDataProvider,
+				'access'=>$access,
+				'awards'=>$awards,
+				'userAnswer'=>$userAnswer,
             ));
             
-	}
+		}
 
       public function getAwardButton($answer)
-      {
-		  
+      { 
             $url = Yii::app()->baseUrl.'/index.php?r=award/create';		  
             $output = CHtml::openTag('form',array('action'=>$url,'method'=>'post'));
             $output .= CHtml::hiddenField('answer_id', $answer->answer_id);
@@ -96,16 +94,7 @@ class QuestionController extends Controller
             return $output;   
       }
       
-      /*       
-      public function getAwardIcon($award) 
-      {
-            $output = CHtml::openTag('span',array('action'=>$url,'method'=>'post'));
-            $imagePath = Yii::app()->baseUrl.'/images/';  
-            $imagePath .= !empty($award) ? 'award.png' : 'award_none.png';   
-            return CHtml::image($imagePath);                 
-      }
-      */      
-      
+        
       // @todo this function and getAcessComponenent are the 'messiest' controller methods.
       // could do with some cleaing up.  Normalizing tag/link construction, just allowing 
       // access rules to take care of action branching (instead of proactively setting the action here) 
@@ -122,7 +111,7 @@ class QuestionController extends Controller
                               
                   echo CHtml::openTag('form',array('action'=>$url,'method'=>'post'));
                   echo CHtml::hiddenField('qid', $qid);
-            	echo CHtml::hiddenField('YII_CSRF_TOKEN',Yii::app()->request->csrfToken);				  
+				  echo CHtml::hiddenField('YII_CSRF_TOKEN',Yii::app()->request->csrfToken);				  
                   echo CHtml::submitButton('Answer Yourself', array('class'=>$buttonClass));
                   echo CHtml::closeTag('form');
                   
@@ -227,7 +216,7 @@ class QuestionController extends Controller
       {
             $award = $this->getUsersAward($answer_id, $userAwards);
             if(!empty($award)) {
-                  echo CHtml::image(Yii::app()->baseUrl.'/images/award.png','',array(
+                  echo ProjectImage::image('award.png', array(
                         'class'=>'float-right', 
                         'title'=>'You made an award to this answer'
                   ));                                                 

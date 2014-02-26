@@ -3,7 +3,8 @@
 <h1><?php $this->echoText(__FILE__,'Time To Cash in on All That Stuff You Know'); ?></h1>
 
 <!-- Attributtion of image per license agreement -->
-<?php echo CHtml::image(Yii::app()->baseUrl . '/images/money-jar-icon.png', '',array('class'=>'float-right','title'=>'Image courtesy of http://artdesigner.lv')); ?>      
+<?php echo ProjectImage::image('money-jar-icon.png',array('class'=>'float-right','title'=>'Image courtesy of http://artdesigner.lv')); ?>
+
 <div class='white-space-pre-wrap'><?php $this->echoText(__FILE__,'About Answers'); ?></div>
       
       

@@ -20,14 +20,14 @@
             
       <div class='landing_left'>
 		  
-		  	<h1><?php $this->echoText(__FILE__,'Take us for a Test Drive'); ?></h1>
-		  	<div>Click on the car below to participate in an interactive demonstration of how our marketplace works.</div>
+		<h1><?php $this->echoText(__FILE__,'Take us for a Test Drive'); ?></h1>
+		<div>Click on the car below to participate in an interactive demonstration of how our marketplace works.</div>
 
-		  	<br />
-
+		<br />
             <div><a href='<?php echo CHtml::normalizeUrl(array('demo/viewQuestion')); ?>' class=''>
-                  <?php echo CHtml::image(Yii::app()->baseUrl.'/images/test_drive.jpg','', array('height'=>'100px','class'=>'')); ?>
-            </a></div>		  
+			
+			<?php ProjectImage::image('test_drive.jpg',array('height'=>'100px')); ?>
+		</a></div>		  
 			<br />
 			<div>You can also read more about us in our 
 				<a href='<?php echo CHtml::normalizeUrl(array('site/page','view'=>'about')); ?>' class=''>About Section</a>

@@ -5,8 +5,22 @@
 
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
+
+
+function _joinpath($dir1, $dir2) {
+    return realpath($dir1 . '/' . $dir2);
+}
+ 
+$homePath      = dirname(__FILE__) . '/../../..';
+$protectedPath = _joinpath($homePath, 'code/php');
+$runtimePath   = _joinpath($homePath, 'runtime');
+
 return array(
-      'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
+      
+    	'basePath'    => $protectedPath,
+	'runtimePath' => $runtimePath,
+	  
+	  
       'name'=>'Answer Fair',
       
       'language'=>'en',

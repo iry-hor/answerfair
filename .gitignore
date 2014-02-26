@@ -11,8 +11,8 @@
 *.htaccess
 
 # Yii directories
+assets/*
 runtime/*
-php/assets/*
 
 # Lauch File
 index.php

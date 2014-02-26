@@ -128,7 +128,7 @@ class DemoController extends Controller
                   return;
             
             $output = CHtml::openTag('a', array('href'=>'','title'=>'This icon indicates that you awarded your access fee to this particular answer'));
-            $output .= CHtml::image(Yii::app()->baseUrl. '/images/award.png');
+            $output .= ProjectImage::image('award.png');
             $output .= CHtml::closeTag('a');
             
             return $output;                      
