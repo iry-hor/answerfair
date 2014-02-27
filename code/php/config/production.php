@@ -4,9 +4,8 @@ function _joinpath($dir1, $dir2) {
     return realpath($dir1 . '/' . $dir2);
 }
  
-$homePath      = dirname(__FILE__) . '/../..';
-$protectedPath = _joinpath($homePath, 'protected');
-$webrootPath   = _joinpath($homePath, 'webroot');
+$homePath      = dirname(__FILE__) . '/../../..';
+$protectedPath = _joinpath($homePath, 'code/php');
 $runtimePath   = _joinpath($homePath, 'runtime');
  
 
