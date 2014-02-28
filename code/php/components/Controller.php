@@ -76,18 +76,17 @@ class Controller extends CController
             $cssDir = Yii::app()->getAssetManager()->publish($cssDir);
                         
             $cs = Yii::app()->getClientScript();
-            $cs->registerCssFile($cssDir.'/custom.css');
-            $cs->registerCssFile($cssDir.'/color.css');   
-            $cs->registerCssFile($cssDir.'/layout.css');
-            
-            $cs->registerCssFile($cssDir.'/blueprint_css/screen.css');
-            $cs->registerCssFile($cssDir.'/blueprint_css/print.css');    
-            $cs->registerCssFile($cssDir.'/blueprint_css/ie.css');
 
+            $cs->registerCssFile($cssDir.'/blueprint_css/screen.css');
+            
             $cs->registerCssFile($cssDir.'/yii_css/main.css');
             $cs->registerCssFile($cssDir.'/yii_css/form.css');    
                    
-            $cs->registerCssFile($cssDir.'/qtip_css/jquery.qtip.min.css');                
+            $cs->registerCssFile($cssDir.'/qtip_css/jquery.qtip.min.css');   
+            
+            $cs->registerCssFile($cssDir.'/custom.css');   
+            $cs->registerCssFile($cssDir.'/color.css');   
+            $cs->registerCssFile($cssDir.'/layout.css');                      
       }      
       
       public function registerJavascript() 
