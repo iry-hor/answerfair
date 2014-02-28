@@ -10,15 +10,14 @@ $runtimePath   = _joinpath($homePath, 'runtime');
  
 
 return array(
-    'basePath'    => $protectedPath,
-    'runtimePath' => $runtimePath,
+      'basePath'=> $protectedPath,
+      'runtimePath' => $runtimePath,
 	
-	'name'=>'Answer Fair',
-    'language'=>'en',
-	// preloading 'log' component
+      'name'=>'Answer Fair',
+      'language'=>'en',
+
 	'preload'=>array('log'),
 
-	// autoloading model and component classes
 	'import'=>array(
             'application.models.*',
             'application.models.demo.*' ,  			

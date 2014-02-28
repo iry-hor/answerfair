@@ -15,5 +15,5 @@ assets/*
 runtime/*
 
 # Lauch File
-index.php
+/index.php
 .tm_properties
