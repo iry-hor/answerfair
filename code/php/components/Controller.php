@@ -80,14 +80,14 @@ class Controller extends CController
             $cs->registerCssFile($cssDir.'/color.css');   
             $cs->registerCssFile($cssDir.'/layout.css');
             
-            $cs->registerCssFile($cssDir.'/css/blueprint_css/screen.css');
-            $cs->registerCssFile($cssDir.'/css/blueprint_css/print.css');    
-            $cs->registerCssFile($cssDir.'/css/blueprint_css/ie.css');
+            $cs->registerCssFile($cssDir.'/blueprint_css/screen.css');
+            $cs->registerCssFile($cssDir.'/blueprint_css/print.css');    
+            $cs->registerCssFile($cssDir.'/blueprint_css/ie.css');
 
-            $cs->registerCssFile($cssDir.'/css/yii_css/main.css');
-            $cs->registerCssFile($cssDir.'/css/yii_css/form.css');    
+            $cs->registerCssFile($cssDir.'/yii_css/main.css');
+            $cs->registerCssFile($cssDir.'/yii_css/form.css');    
                    
-            $cs->registerCssFile($cssDir.'/css/qtip_css/jquery.qtip.min.css');                
+            $cs->registerCssFile($cssDir.'/qtip_css/jquery.qtip.min.css');                
       }      
       
       public function registerJavascript() 
