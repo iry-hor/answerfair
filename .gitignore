@@ -16,3 +16,4 @@ runtime/*
 
 # Lauch File
 index.php
+.tm_properties

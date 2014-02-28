@@ -68,6 +68,40 @@ class Controller extends CController
             return $viewPath;      
       }
       
+
+      
+      public function registerStyleSheets() 
+      {   
+            $cssDir = dirname(__FILE__).'/../../css/';
+            $cssDir = Yii::app()->getAssetManager()->publish($cssDir);
+                        
+            $cs = Yii::app()->getClientScript();
+            $cs->registerCssFile($cssDir.'/custom.css');
+            $cs->registerCssFile($cssDir.'/color.css');   
+            $cs->registerCssFile($cssDir.'/layout.css');
+            
+            $cs->registerCssFile($cssDir.'/blueprint_css/css/screen.css');
+            $cs->registerCssFile($cssDir.'/blueprint_css/css/print.css');    
+            $cs->registerCssFile($cssDir.'/blueprint_css/css/ie.css');
+
+            $cs->registerCssFile($cssDir.'/yii_css/css/main.css');
+            $cs->registerCssFile($cssDir.'/yii_css/css/form.css');    
+                   
+            $cs->registerCssFile($cssDir.'/qtip_css/css/jquery.qtip.min.css');                
+      }      
+      
+      public function registerJavascript() 
+      {            
+            $jsDir = dirname(__FILE__).'/../../js/';
+            $jsDir = Yii::app()->getAssetManager()->publish($jsDir);
+                        
+            $cs = Yii::app()->getClientScript();
+            $cs->registerScriptFile($jsDir.'/jquery.blockUI.js');
+            $cs->registerScriptFile($jsDir.'/jquery.qtip.min.js');   
+            $cs->registerScriptFile($jsDir.'/markdown.js'); 
+            
+            $cs->registerCoreScript('jquery');
+      }
       
       public function showLogin() 
       {

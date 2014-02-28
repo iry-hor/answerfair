@@ -1,12 +1,5 @@
 <?php
 
-// uncomment the following to define a path alias
-// Yii::setPathOfAlias('local','path/to/local-folder');
-
-// This is the main Web application configuration. Any writable
-// CWebApplication properties can be configured here.
-
-
 function _joinpath($dir1, $dir2) {
     return realpath($dir1 . '/' . $dir2);
 }
@@ -17,10 +10,9 @@ $runtimePath   = _joinpath($homePath, 'runtime');
 
 return array(
       
-    	'basePath'    => $protectedPath,
+	'basePath'    => $protectedPath,
 	'runtimePath' => $runtimePath,
-	  
-	  
+	
       'name'=>'Answer Fair',
       
       'language'=>'en',

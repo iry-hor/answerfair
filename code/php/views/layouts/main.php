@@ -4,34 +4,20 @@
 <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
       <meta name="language" content="en" />
-      
-      <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/code/css/qtip_css/jquery.qtip.min.css" />  
 
-      <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/code/css/blueprint_css/print.css" media="print" />
-      <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/code/css/blueprint_css/screen.css" media="screen, projection" />
+      <?php $this->registerStyleSheets(); ?>
 
-      <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/code/css/yii_css/main.css" />
-      <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/code/css/yii_css/form.css" />
-	
-      <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/code/css/custom.css" />
-      <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/code/css/layout.css" />
-      <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/code/css/color.css" />      
-   
       <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />            
-         
+        
       <title><?php echo CHtml::encode($this->pageTitle); ?></title>
       
 </head>
 <body>
-      <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-      <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-      <script src="http://malsup.github.io/jquery.blockUI.js"></script>
+      
+      <?php $this->registerJavascript(); ?>
       <script src="https://js.stripe.com/v2/"></script>     
-      <script src="https://checkout.stripe.com/v2/checkout.js"></script>
+      <script src="https://checkout.stripe.com/v2/checkout.js"></script>   
 	  
-      <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.qtip.min.js"></script>      
-	  <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/markdown.js"></script>    
-     
       <script>
       $(document).ready(function(){
                          
