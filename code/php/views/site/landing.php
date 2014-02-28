@@ -27,11 +27,7 @@
             <div><a href='<?php echo CHtml::normalizeUrl(array('demo/viewQuestion')); ?>' class=''>
 			
 			<?php ProjectImage::image('test_drive.jpg',array('height'=>'100px')); ?>
-		</a></div>		  
-			<br />
-			<div>You can also read more about us in our 
-				<a href='<?php echo CHtml::normalizeUrl(array('site/page','view'=>'about')); ?>' class=''>About Section</a>
-			</div>		  
+		</a></div>		  	  
 		  			
       </div>    
           

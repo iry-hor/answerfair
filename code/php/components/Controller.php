@@ -103,6 +103,9 @@ class Controller extends CController
             $cs->registerCoreScript('jquery');
       }
       
+      
+      
+      
       public function showLogin() 
       {
       	if(!isset($_REQUEST['r']))
