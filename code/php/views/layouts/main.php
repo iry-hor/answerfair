@@ -17,8 +17,33 @@
       <?php $this->registerJavascript(); ?>
       <script src="https://js.stripe.com/v2/"></script>     
       <script src="https://checkout.stripe.com/v2/checkout.js"></script>   
-	  
+
       <script>
+            UserVoice=window.UserVoice||[];
+            (function(){
+              var uv=document.createElement('script');
+              uv.type='text/javascript';
+              uv.async=true;
+              uv.src='//widget.uservoice.com/M489jsF0mVtEnDrk7TkkDQ.js';
+              var s=document.getElementsByTagName('script')[0];
+              s.parentNode.insertBefore(uv,s)
+            })();
+       
+      </script>
+      
+      <?php  if(!Yii::app()->user->isGuest) {
+            $model = User::model()->findByPk(Yii::app()->user->id);
+      ?>
+            <script>
+                  UserVoice.push(['identify', {
+                    email: <?php echo '\''.$model->email.'\''; ?>, // User’s email address
+                    name: 'John Doe', // User’s real name
+                    created_at: 1364406966, // Unix timestamp for the date the user signed up
+                  }]);
+            </script>   
+      <?php } ?>
+      <script>
+      
       $(document).ready(function(){
                          
             $("#account_button").click(function(){
