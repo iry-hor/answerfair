@@ -31,7 +31,7 @@
               key:         '<?php echo Yii::app()->params['stripekeys']['publishable_key']; ?>',
               amount:      amount,
               currency:    'usd',
-              name:        '<?php $this->echoText(__FILE__,"Answer Fair Account Credit (fees apply)"); ?>',
+              name:        '<?php $this->echoText(__FILE__,"Answer Fair"); ?>',
               description: '<?php $this->echoText(__FILE__,"Fund Account with USD"); ?> ' + amount/100,
               panelLabel:  '<?php $this->echoText(__FILE__,"Charge My Card"); ?>',
               token:       token

@@ -50,7 +50,7 @@
 
 
 <?php $form=$this->beginWidget('CActiveForm', 
-      array('id'=>'withdrawForm','action'=>array('user/withdraw'),'method'=>'post',)); ?>    
+      array('id'=>'withdrawForm','action'=>array('user/withdraw'),'method'=>'post','htmlOptions'=>array('autocomplete'=>'off'))); ?>    
                              
       <div id='withdraw-panel' class='input-form'>
             <div class='invisible flash flash_error' id='transferErrors'>  
@@ -63,28 +63,28 @@
             <br>
             <table>
                   <tr><td>
-                        <?php echo $form->textField($model,'account_name',array('class'=>'form_field','id'=>'account-name','size'=>'60', 'placeholder'=>'Name on Account')); ?>
+                        <?php echo $form->textField($model,'account_name',array('autocomplete'=>'off','class'=>'form_field','id'=>'account-name','size'=>'60', 'placeholder'=>'Name on Account')); ?>
                         <div class='info-label'><?php $this->echoText(__FILE__,'The full, legal name associated with your checking account'); ?></div>           
                   </td></tr>
                   <tr><td>
-                        <input class='form_field' id='routing-number' type='text' size='25' placeholder='Routing Number'>
+                        <input class='form_field' autocomplete='off' id='routing-number' type='text' size='25' placeholder='Routing Number'>
                         <div class='info-label'><?php $this->echoText(__FILE__,'Your Bank\'s Routing Number'); ?></div>
                    </td></tr>
                   <tr><td>
-                        <input class='form_field' id='account-number' type='text' size='25' placeholder='Account Number'>
+                        <input class='form_field' autocomplete='off' id='account-number' type='text' size='25' placeholder='Account Number'>
                         <div class='info-label'><?php $this->echoText(__FILE__,'Your Checking Account Number'); ?></div>
                   </td></tr>           
                   <tr><td>
-                        <img height='24' src="images/stripe/dark_outline.png" class='float-right small_margin'>    
+                        <?php echo ProjectImage::image('stripe/dark_outline.png',array('class'=>'float-right small_margin', 'height'=>'24')); ?>
                         <div style='border-bottom: 1px solid darkgrey; overflow:hidden'><br></div>
                   </td></tr>
                   <tr><td>
-                        <?php echo $form->textField($model,'amount',array('class'=>'form_field','placeholder'=>'Withdrawal Amount','size'=>25)); ?>
+                        <?php echo $form->textField($model,'amount',array('autocomplete'=>'off','class'=>'form_field','placeholder'=>'Withdrawal Amount','size'=>25)); ?>
                         <?php echo $form->error($model,'amount',array('style'=>'display:inline')); ?>                           
                         <div class='info-label'><?php $this->echoText(__FILE__,'Max is ') . $user->balance;?></div>
                   </td></tr>
                   <tr><td>
-                        <?php echo $form->passwordField($model,'password',array('class'=>'form_field','size'=>25,'placeholder'=>'Answer Fair Password')); ?>
+                        <?php echo $form->passwordField($model,'password',array('autocomplete'=>'off','class'=>'form_field','size'=>25,'placeholder'=>'Answer Fair Password')); ?>
                         <?php echo $form->error($model,'password',array('style'=>'color:red; font-size:.9em; display:inline')); ?>          
                         <div class='info-label'><?php $this->echoText(__FILE__,'For your security, pleaes re-provide your password'); ?></div>
                   </td></tr>
@@ -92,7 +92,7 @@
                         <br>
                         <button type='submit' id='withraw_form_submit' class='button green margin_left'>Submit Request</button>
 						
-                        <?php echo ProjectImage::image('ajax-loader.gif', '', array('class'=>'invisible','id'=>'wait-icon', 'height'=>'20px')); ?>
+                        <?php echo ProjectImage::image('ajax-loader.gif', array('class'=>'invisible','id'=>'wait-icon', 'height'=>'20px')); ?>
 						
 						
                   </td></tr>                   
