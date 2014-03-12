@@ -6,7 +6,7 @@
       
       <div class='documentation_header'>
             <span class='text-emphasize'>THE BASICS</span>
-            <span><?php echo CHtml::link($this->text(__FILE__,'LEGAL'), array('site/page','view'=>'legal'), array('class'=>'strip-decoration text-deemphasize')); ?>  	        
+            <span><?php echo CHtml::link($this->text(__FILE__,'DISCLAIMER'), array('site/page','view'=>'legal'), array('class'=>'strip-decoration text-deemphasize')); ?>  	        
             </span>
       </div>
 	  
