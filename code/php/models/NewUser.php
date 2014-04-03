@@ -27,7 +27,7 @@ class NewUser extends CActiveRecord
 	*/
 	public function beforeValidate() 
 	{ 
-    	$user = User::model()->findByAttributes(array('email'=>$this->email));
+    	      $user = User::model()->findByAttributes(array('email'=>$this->email));
 		
 		// Half registration conditions are defined by stubbed user table entry:  
 		// 		email but nothing else		

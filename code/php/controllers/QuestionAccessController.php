@@ -46,7 +46,7 @@ class QuestionAccessController extends Controller
       
       public function actionCreate()
       {    
-      		$question_id = $_POST['qid'];
+      	$question_id = $_POST['qid'];
             $activeLedgerRow = UserLedgerController::getActiveRecord(Yii::app()->user->id);            
             $validator = $this->validateRequest($activeLedgerRow);	
             
